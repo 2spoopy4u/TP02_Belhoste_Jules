@@ -1,0 +1,118 @@
+<form id="clientForm" [ngFormOptions]="{updateOn: 'submit'}" (submit)="checkAndSubmit($event)">
+    <div class="container">
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="civil">Civilité</label>
+                <select required type="text" class="form-control" name="civil" [(ngModel)]="user.civil"  >
+                <option value="M">M</option>
+                <option value="Mmme">Mme</option>
+
+                </select>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="name">Nom</label>
+                <input required type="text" class="form-control" name="name" [(ngModel)]="user.nom"/>
+            </div>
+            <div class="form-group col-md-4">
+                <label for="firstname">Prénom</label>
+                <input required type="text" class="form-control" name="firstname" [(ngModel)]="user.prenom"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label for="adresse">Adresse</label>
+                <input required type="text" class="form-control" name="adresse" [(ngModel)]="user.adresse"/>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="CP">Code postal</label>
+                <input required type="text" class="form-control" name="CP" [(ngModel)]="user.cp"/>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="ville">Ville</label>
+                <input required type="text" class="form-control" name="ville" [(ngModel)]="user.ville"/>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="Pays">Pays</label>
+                <input required type="text" class="form-control" name="Pays" [(ngModel)]="user.pays"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="telephone">Téléphone</label>
+                <input required type="text" class="form-control" name="telephone" [(ngModel)]="user.tel"/>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="mail">Addresse mail</label>
+                <input required type="text" class="form-control" name="mail" [(ngModel)]="user.mail"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label for="login">Login</label>
+                <input required type="text" class="form-control" name="login" [(ngModel)]="user.login"/>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="pwd">Mot de passe</label>
+                <input required type="password" class="form-control" name="pwd" [(ngModel)]="user.mdp"/>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="pwdCheck">Confirmer le mot de passe</label>
+                <input required type="password" class="form-control" name="pwdCheck" [(ngModel)]="pwdCheck"/>
+            </div>
+        </div>
+        <div class="row footer">
+            <div class="form-group col-md-10">
+            </div>
+            <div class="form-group col-md-1">
+                <button  class="btn btn-primary mb-2" type="submit">Valider</button>
+            </div>
+        </div>
+    </div>
+    <div class="container" [style.display]="isDisplayed?'block':'none'">
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label >Civilité : <span>{{user.civil}}</span></label>
+                
+            </div>
+            <div class="form-group col-md-4">
+                <label>Nom : <span>{{user.nom}}</span></label>
+            </div>
+            <div class="form-group col-md-4">
+                <label>Prénom : <span>{{user.prenom}}</span></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-4">
+                <label>Adresse : <span>{{user.adresse}}</span></label>
+            </div>
+            <div class="form-group col-md-2">
+                <label>Code postal : <span>{{user.cp}}</span></label>
+            </div>
+            <div class="form-group col-md-3">
+                <label>Ville : <span>{{user.ville}}</span></label>
+            </div>
+            <div class="form-group col-md-3">
+                <label>Pays : <span>{{user.pays}}</span></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label>Téléphone : <span>{{user.tel}}</span></label>
+            </div>
+            <div class="form-group col-md-6">
+                <label>Addresse mail : <span>{{user.mail}}</span></label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-6">
+                <label>Login : <span>{{user.login}}</span></label>
+            </div>
+            <div class="form-group col-md-6">
+                <label>Mot de passe : <span>{{user.mdp}}</span></label>            </div>
+        </div>
+    </div>
+</form>
